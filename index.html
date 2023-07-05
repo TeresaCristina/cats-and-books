@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>W3.CSS Template</title>
+  <title>READ AROUND THE WORLD</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -43,7 +43,15 @@ and is wrapped around the whole page content, except for the footer in this exam
             <h3> <img src="https://www.countryflagicons.com/FLAT/64/AF.png"><b>    Afghanistan <h5>The patience stone</h5></b></h3>
             
             <h7> <span class="w3-opacity">START: June 26, 2023</span></h7>
-            <h7> <span class="w3-opacity">END: </span></h7>
+            <h7> <span class="w3-opacity">END: June 30, 2023 </span></h7>
+          </div>
+        </div>
+        <div class="w3-card-4 w3-margin w3-white">
+          <div class="w3-container">
+            <h3> <img src="https://www.countryflagicons.com/FLAT/64/AL.png"><b>    Albania <h5>Sworn Virgin</h5></b></h3>
+            
+            <h7> <span class="w3-opacity">START: July 01, 2023</span></h7>
+            <h7> <span class="w3-opacity">END:  </span></h7>
           </div>
         </div>
         <hr>
@@ -58,7 +66,6 @@ and is wrapped around the whole page content, except for the footer in this exam
         <div class="w3-card w3-margin w3-margin-top">
           <img id="cat-image" src=urlCat style="width:35%">
           <div class="w3-container w3-white">
-            <h4><b>CAT FACTS</b></h4>
             <p id="cats"></p>
             <script type="text/javascript">
               var apiUrl = 'https://cataas.com/cat?html=true&json=true';
@@ -85,19 +92,29 @@ and is wrapped around the whole page content, except for the footer in this exam
         <hr>
         <div class="w3-card w3-margin w3-margin-top">
           <div class="w3-container w3-white">
-            <h4><b>CURRENT BOOK</b></h4>
             <h5><b id="catstwo"></b></h5>
+            <h7><p id="catsauthor"></p></h7>
             <i>
               <p id="catsthree"></p>
             </i>
             <script type="text/javascript">
-              var apiUrl = 'https://openlibrary.org/works/OL15611821W.json';
+                //var apiUrl = 'https://openlibrary.org/works/OL15611821W.json';
+             var apiUrl = 'https://openlibrary.org/works/OL19980028W.json';
+               //var apiAuthor = 'https://openlibrary.org/authors/OL2645201A.json';
+              var apiAuthor = 'https://openlibrary.org/authors/OL5499254A.json';
               var errorMessage = "This is supposed to be a fact about cats. But something happened...maybe it was a cat...";
               fetch(apiUrl).then(response => {
                 return response.json();
               }).then(data => {
                 document.getElementById("catstwo").innerHTML = data.title,
                   document.getElementById("catsthree").innerHTML = data.description.value
+              }
+              ).catch(err => document.getElementById("catstwo").innerHTML = errorMessage
+              );
+              fetch(apiAuthor).then(response => {
+                return response.json();
+              }).then(data => {
+                document.getElementById("catsauthor").innerHTML = data.name
               }
               ).catch(err => document.getElementById("catstwo").innerHTML = errorMessage
               );
@@ -111,18 +128,17 @@ and is wrapped around the whole page content, except for the footer in this exam
           </div>
           <ul class="w3-ul w3-hoverable w3-white">
             <li class="w3-padding-16">
-              <h3> <img src="https://www.countryflagicons.com/FLAT/64/AL.png"><b>    Albania</b></h3>
-            </li>
-            <li class="w3-padding-16">
-              <h3> <img src="https://www.countryflagicons.com/FLAT/64/DZ.png"><b>    Algeria</b></h3>
+              <h3> <img src="https://www.countryflagicons.com/FLAT/64/DZ.png"><b>    Algeria - <a href="https://www.amazon.com/So-Vast-Prison-Assia-Djebar/dp/1583220674" target="_blank"> So Vast Prison</a> </b></h3>
             </li> 
             <li class="w3-padding-16">
               <h3> <img src="https://www.countryflagicons.com/FLAT/64/AN.png"><b>    Andorra</b></h3>
             </li>   
             <li class="w3-padding-16 w3-hide-medium w3-hide-small">
-              <h3> <img src="https://www.countryflagicons.com/FLAT/64/AO.png"><b>    Angola</b></h3>
-
+              <h3> <img src="https://www.countryflagicons.com/FLAT/64/AO.png"><b>    Angola - <a href="https://www.amazon.com.br/As-mulheres-do-meu-pai-ebook/dp/B0BTMXKML5/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=&sr=" target="_blank"> As mulheres de meu pai</a>
             </li>  
+            <li class="w3-padding-16 w3-hide-medium w3-hide-small">  </b></h3>
+              <h3> <img src="https://www.countryflagicons.com/FLAT/64/AG.png"><b>    Antigua and Barbuda</b></h3>
+            </li> 
           </ul>
         </div>
 
