@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html>
 
+<!-- HEAD -->
+
 <head>
-  <title>READ AROUND THE WORLD</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+  <title>READ AROUND THE WORLD</title>
   <style>
     body,
     h1,
@@ -18,6 +22,8 @@
     }
   </style>
 </head>
+
+<!-- END HEAD -->
 
 <body class="w3-light-grey">
 
@@ -32,7 +38,7 @@ and is wrapped around the whole page content, except for the footer in this exam
         </a></p>
     </header>
 
-    <!-- Grid -->
+    <!-- LEFT GRID -->
     <div class="w3-row">
 
       <!-- Blog entries -->
@@ -40,105 +46,82 @@ and is wrapped around the whole page content, except for the footer in this exam
         <!-- Blog entry -->
         <div class="w3-card-4 w3-margin w3-white">
           <div class="w3-container">
-            <h3> <img src="https://www.countryflagicons.com/FLAT/64/AF.png"><b>    Afghanistan <h5>The patience stone</h5></b></h3>
-            
+            <h3> <img src="https://www.countryflagicons.com/FLAT/64/AF.png"><b> Afghanistan <h5>The patience stone</h5>
+              </b></h3>
+
             <h7> <span class="w3-opacity">START: June 26, 2023</span></h7>
             <h7> <span class="w3-opacity">END: June 30, 2023 </span></h7>
           </div>
         </div>
         <div class="w3-card-4 w3-margin w3-white">
           <div class="w3-container">
-            <h3> <img src="https://www.countryflagicons.com/FLAT/64/AL.png"><b>    Albania <h5>Sworn Virgin</h5></b></h3>
-            
+            <h3> <img src="https://www.countryflagicons.com/FLAT/64/AL.png"><b> Albania <h5>Sworn Virgin</h5></b></h3>
+
             <h7> <span class="w3-opacity">START: July 01, 2023</span></h7>
-            <h7> <span class="w3-opacity">END:  </span></h7>
+            <h7> <span class="w3-opacity">END: </span></h7>
           </div>
         </div>
         <hr>
 
-
-        <!-- END BLOG ENTRIES -->
       </div>
+      <!-- END LEFT GRID -->
 
       <!-- Introduction menu -->
       <div class="w3-col l4">
-        <!-- About Card -->
+
+        <!-- CATS CARD -->
         <div class="w3-card w3-margin w3-margin-top">
           <img id="cat-image" src=urlCat style="width:35%">
           <div class="w3-container w3-white">
-            <p id="cats"></p>
-            <script type="text/javascript">
-              var apiUrl = 'https://cataas.com/cat?html=true&json=true';
-              const urlImage = 'https://cataas.com';
-              var errorMessage = "This is supposed to be a fact about cats. But something happened...maybe it was a cat...";
-              fetch(apiUrl).then(response => {
-                return response.json();
-              }).then(data => document.getElementById("cat-image").src = urlImage + data.url
-              ).catch(err => document.getElementById("cat-image").innerHTML = errorMessage
-              );
-            </script>
-            <script type="text/javascript">
-              var apiUrl = 'https://catfact.ninja/fact?max_length=140';
-              var errorMessage = "This is supposed to be a fact about cats. But something happened...maybe it was a cat...";
-              fetch(apiUrl).then(response => {
-                return response.json();
-              }).then(data => document.getElementById("cats").innerHTML = data.fact
-              ).catch(err => document.getElementById("cats").innerHTML = errorMessage
-              );
-            </script>
+            <p id="cat-fact"></p>
+            <script type="text/javascript" src="cats-photos.js"></script>
+            <script type="text/javascript" src="cats-facts.js"></script>
           </div>
         </div>
-       
+        <!-- END CATS CARD -->
+
         <hr>
+
+        <!-- CURRENT BOOK -->
         <div class="w3-card w3-margin w3-margin-top">
           <div class="w3-container w3-white">
-            <h5><b id="catstwo"></b></h5>
-            <h7><p id="catsauthor"></p></h7>
+            <h5><b id="book-title"></b></h5>
+            <h7>
+              <p id="book-authors"></p>
+            </h7>
             <i>
-              <p id="catsthree"></p>
+              <p id="book-description"></p>
             </i>
-            <script type="text/javascript">
-                //var apiUrl = 'https://openlibrary.org/works/OL15611821W.json';
-             var apiUrl = 'https://openlibrary.org/works/OL19980028W.json';
-               //var apiAuthor = 'https://openlibrary.org/authors/OL2645201A.json';
-              var apiAuthor = 'https://openlibrary.org/authors/OL5499254A.json';
-              var errorMessage = "This is supposed to be a fact about cats. But something happened...maybe it was a cat...";
-              fetch(apiUrl).then(response => {
-                return response.json();
-              }).then(data => {
-                document.getElementById("catstwo").innerHTML = data.title,
-                  document.getElementById("catsthree").innerHTML = data.description.value
-              }
-              ).catch(err => document.getElementById("catstwo").innerHTML = errorMessage
-              );
-              fetch(apiAuthor).then(response => {
-                return response.json();
-              }).then(data => {
-                document.getElementById("catsauthor").innerHTML = data.name
-              }
-              ).catch(err => document.getElementById("catstwo").innerHTML = errorMessage
-              );
-            </script>
+            <script type="text/javascript" src="book-details.js"></script>
+            <script type="text/javascript" src="book-author.js"></script>
           </div>
         </div>
+        <!-- END CURRENT BOOK -->
+
         <hr>
+
+
         <div class="w3-card w3-margin">
           <div class="w3-container w3-padding">
             <h4><b>NEXT BOOKS</b></h4>
           </div>
           <ul class="w3-ul w3-hoverable w3-white">
             <li class="w3-padding-16">
-              <h3> <img src="https://www.countryflagicons.com/FLAT/64/DZ.png"><b>    Algeria - <a href="https://www.amazon.com/So-Vast-Prison-Assia-Djebar/dp/1583220674" target="_blank"> So Vast Prison</a> </b></h3>
-            </li> 
+              <h3> <img src="https://www.countryflagicons.com/FLAT/64/DZ.png"><b> Algeria - <a
+                    href="https://www.amazon.com/So-Vast-Prison-Assia-Djebar/dp/1583220674" target="_blank"> So Vast
+                    Prison</a> </b></h3>
+            </li>
             <li class="w3-padding-16">
-              <h3> <img src="https://www.countryflagicons.com/FLAT/64/AN.png"><b>    Andorra</b></h3>
-            </li>   
+              <h3> <img src="https://www.countryflagicons.com/FLAT/64/AN.png"><b> Andorra</b></h3>
+            </li>
             <li class="w3-padding-16 w3-hide-medium w3-hide-small">
-              <h3> <img src="https://www.countryflagicons.com/FLAT/64/AO.png"><b>    Angola - <a href="https://www.amazon.com.br/As-mulheres-do-meu-pai-ebook/dp/B0BTMXKML5/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=&sr=" target="_blank"> As mulheres de meu pai</a>
-            </li>  
-            <li class="w3-padding-16 w3-hide-medium w3-hide-small">  </b></h3>
-              <h3> <img src="https://www.countryflagicons.com/FLAT/64/AG.png"><b>    Antigua and Barbuda</b></h3>
-            </li> 
+              <h3> <img src="https://www.countryflagicons.com/FLAT/64/AO.png"><b> Angola - <a
+                    href="https://www.amazon.com.br/As-mulheres-do-meu-pai-ebook/dp/B0BTMXKML5/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=&sr="
+                    target="_blank"> As mulheres de meu pai</a>
+            </li>
+            <li class="w3-padding-16 w3-hide-medium w3-hide-small"> </b></h3>
+              <h3> <img src="https://www.countryflagicons.com/FLAT/64/AG.png"><b> Antigua and Barbuda</b></h3>
+            </li>
           </ul>
         </div>
 
