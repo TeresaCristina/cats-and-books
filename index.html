@@ -4,7 +4,12 @@
 <!-- HEAD -->
 
 <head>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+  <script id="entry-template" type="text/x-handlebars-template">
+    {{#each book as |book|}}
+      <b><h3><img src="{{book.link}}"> {{book.country}} - <i> <a href="{{book.linkTitle}}" target="_blank">{{title}}</a></i></h3></b>
+    {{/each}}
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -38,35 +43,23 @@ and is wrapped around the whole page content, except for the footer in this exam
         </a></p>
     </header>
 
-    <!-- LEFT GRID -->
-    <div class="w3-row">
 
+    <div class="w3-row">
+      
+      <!-- LEFT GRID -->
       <!-- Blog entries -->
       <div class="w3-col l8 s12">
         <!-- Blog entry -->
         <div class="w3-card-4 w3-margin w3-white">
           <div class="w3-container">
-            <h3> <img src="https://www.countryflagicons.com/FLAT/64/AF.png"><b> Afghanistan <h5>The patience stone</h5>
-              </b></h3>
-
-            <h7> <span class="w3-opacity">START: June 26, 2023</span></h7>
-            <h7> <span class="w3-opacity">END: June 30, 2023 </span></h7>
+            <div id="book-entry-two"></div>
+            <script src="read-books.js" type="text/javascript"></script>
           </div>
         </div>
-        <div class="w3-card-4 w3-margin w3-white">
-          <div class="w3-container">
-            <h3> <img src="https://www.countryflagicons.com/FLAT/64/AL.png"><b> Albania <h5>Sworn Virgin</h5></b></h3>
-
-            <h7> <span class="w3-opacity">START: July 01, 2023</span></h7>
-            <h7> <span class="w3-opacity">END: </span></h7>
-          </div>
-        </div>
-        <hr>
-
       </div>
       <!-- END LEFT GRID -->
 
-      <!-- Introduction menu -->
+      <!-- RIGHT GRID -->
       <div class="w3-col l4">
 
         <!-- CATS CARD -->
@@ -98,34 +91,6 @@ and is wrapped around the whole page content, except for the footer in this exam
         </div>
         <!-- END CURRENT BOOK -->
 
-        <hr>
-
-
-        <div class="w3-card w3-margin">
-          <div class="w3-container w3-padding">
-            <h4><b>NEXT BOOKS</b></h4>
-          </div>
-          <ul class="w3-ul w3-hoverable w3-white">
-            <li class="w3-padding-16">
-              <h3> <img src="https://www.countryflagicons.com/FLAT/64/DZ.png"><b> Algeria - <a
-                    href="https://www.amazon.com/So-Vast-Prison-Assia-Djebar/dp/1583220674" target="_blank"> So Vast
-                    Prison</a> </b></h3>
-            </li>
-            <li class="w3-padding-16">
-              <h3> <img src="https://www.countryflagicons.com/FLAT/64/AN.png"><b> Andorra</b></h3>
-            </li>
-            <li class="w3-padding-16 w3-hide-medium w3-hide-small">
-              <h3> <img src="https://www.countryflagicons.com/FLAT/64/AO.png"><b> Angola - <a
-                    href="https://www.amazon.com.br/As-mulheres-do-meu-pai-ebook/dp/B0BTMXKML5/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=&sr="
-                    target="_blank"> As mulheres de meu pai</a>
-            </li>
-            <li class="w3-padding-16 w3-hide-medium w3-hide-small"> </b></h3>
-              <h3> <img src="https://www.countryflagicons.com/FLAT/64/AG.png"><b> Antigua and Barbuda</b></h3>
-            </li>
-          </ul>
-        </div>
-
-        <hr>
         <!-- END Introduction Menu -->
       </div>
 
