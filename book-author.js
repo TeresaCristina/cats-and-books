@@ -1,10 +1,10 @@
-const apiLibrary = 'https://openlibrary.org/works/';
+const apiLibraryAuthor = 'https://openlibrary.org/authors/';
 const authors = [
     "OL2645201A",
     "OL5499254A",
 ];
-var apiAuthors = apiLibrary + authors[1] + '.json';
-var errorMessage = "This is supposed to be the name of a person. But something happened...maybe it was a cat...";
+var apiAuthors = apiLibraryAuthor + authors[1] + '.json';
+var errorMessage = "This is supposed to be the name of a person.";
 
 
 fetch(apiAuthors).then(response => {
