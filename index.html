@@ -16,38 +16,25 @@
       <h3 style="display: inline-block" ><b>{{book.country}}</b></h3>
       <h5 ><i><a href="{{book.linkTitle}}" target="_blank">{{title}}</a></i> </h5>
    
-    <div class="w3-container">
-      <div class="w3-row">
-        <div class="w3-col m8 s12">
-          <p><span class="fa fa-star {{book.firststar}}"></span>
-            <span class="fa fa-star {{book.secondstar}}"></span>
-            <span class="fa fa-star {{book.thirdstar}}"></span>
-            <span class="fa fa-star {{book.fourthstar}}"></span>
-            <span class="fa fa-star {{book.fifthstar}}"></span></p>
+      <div class="w3-container">
+        <div class="w3-row">
+          <div class="w3-col m8 s12">
+            <p><span class="fa fa-star {{book.firststar}}"></span>
+              <span class="fa fa-star {{book.secondstar}}"></span>
+              <span class="fa fa-star {{book.thirdstar}}"></span>
+              <span class="fa fa-star {{book.fourthstar}}"></span>
+              <span class="fa fa-star {{book.fifthstar}}"></span></p>
+          </div>
         </div>
       </div>
+      <h6><i><b>INES:</b></i> {{book.reviewInes}} </h6>
+      <h6><i><b>TERESA:</b></i> {{book.reviewTeresa}} </h6>
+    
     </div>
+
   </div>
-</div>
   {{/each}}
   </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
