@@ -1,14 +1,16 @@
 window.onload = function () {
     //Grab the inline template
     //var template = document.getElementById('entry-template').innerHTML;
-    var template = document.getElementById('blog-entry-template').innerHTML;
-    
+    var template_two = document.getElementById('blog-entry-template-two').innerHTML;
+    var template_one = document.getElementById('blog-entry-template-one').innerHTML;
+
     //Compile the template
-    var compiled_template = Handlebars.compile(template);
+    var compiled_template_two = Handlebars.compile(template_two);
+    var compiled_template_one = Handlebars.compile(template_one);
     const apiFlag = "https://www.countryflagicons.com/FLAT/64/";
     const amazon = "https://www.amazon.com.br/";
     //Render the data into the template
-    var rendered = compiled_template(
+    var rendered_one = compiled_template_one(
         {  
             book: [
                 {
@@ -154,6 +156,12 @@ window.onload = function () {
                     fourthstar: "",
                     fifthstar: "",
                 },
+            ],
+        });
+    var rendered_two= compiled_template_two(
+        {  
+            book: [
+         
                 {
                     link: apiFlag + "AL.png",
                     country: "Albania",
@@ -178,8 +186,6 @@ window.onload = function () {
                     starsInes: "4.5/5",
                     reviewTeresa: "This is an amazing journey through a woman's inner voice. Everything she is, her thoughts, feelings, and confusion about the rules of the world. How she connects her present with her past and makes decisions about the future. I didn't care much for the ending, though (it seemed like the author didn't know how to end). It left a mark on me. I will probably read it again in the future.",
                     starsTeresa: "4/5",
-                    //Half Star: fa-star-half-o checked
-                    //Full Star: fa fa-star checked
                     firststar: "fa fa-star checked", 
                     secondstar: "fa fa-star checked",
                     thirdstar: "fa fa-star checked",
@@ -190,5 +196,6 @@ window.onload = function () {
         });
 
     //Overwrite the contents of #target with the renderer HTML
-    document.getElementById('book-entry-two').innerHTML = rendered;
+    document.getElementById('book-entry-one').innerHTML = rendered_one;
+    document.getElementById('book-entry-two').innerHTML = rendered_two;
 }
