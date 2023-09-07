@@ -13,25 +13,41 @@
     
     <div class="w3-container">
       <img src="{{book.link}}">
-      <h3 style="display: inline-block" ><b>{{book.country}}</b></h3>
-      <h5 ><i><a href="{{book.linkTitle}}" target="_blank">{{title}}</a></i> </h5>
-   
+      <h4 style="display: inline-block" ><b>&nbsp;&nbsp;{{book.country}}</b></h4>
+      <h5 style="display: inline-block" ><i>&nbsp;&nbsp;&nbsp;&nbsp;<a href="{{book.linkTitle}}" target="_blank">{{title}}</a></i> </h5>
+
       <div class="w3-container">
         <div class="w3-row">
           <div class="w3-col m8 s12">
-            <p><span class="fa fa-star {{book.firststar}}"></span>
-              <span class="fa fa-star {{book.secondstar}}"></span>
-              <span class="fa fa-star {{book.thirdstar}}"></span>
-              <span class="fa fa-star {{book.fourthstar}}"></span>
-              <span class="fa fa-star {{book.fifthstar}}"></span></p>
+            <p><span class="{{book.firststar}}"></span>
+              <span class="{{book.secondstar}}"></span>
+              <span class="{{book.thirdstar}}"></span>
+              <span class="{{book.fourthstar}}"></span>
+              <span class="{{book.fifthstar}}"></span></p>
           </div>
         </div>
       </div>
-      <h6><i><b>INES:</b></i> {{book.reviewInes}} </h6>
-      <h6><i><b>TERESA:</b></i> {{book.reviewTeresa}}
-      <b style="display: inline-block; color: rgb(67, 1, 1)">{{book.starsTeresa}}</b> </h6>
-    
-    </div>
+      
+      <div class="w3-dropdown-hover">
+        
+        <h6><i><b style="color: rgb(148, 21, 120)">INES</b></i></h6>
+      <div class="w3-dropdown-content w3-card-4" style="width:500px">
+        <div class="w3-container">
+        <h6> {{book.reviewInes}}<b style="display: inline-block; color: rgb(148, 21, 120)">&nbsp;&nbsp;{{book.starsInes}}</b> </h6>
+        </div>
+      </div>
+      </div>
+
+      <div class="w3-dropdown-hover">
+        <h6><i><b style="color: rgb(13, 94, 114)">&nbsp;&nbsp;TERESA</b></i></h6>
+      <div class="w3-dropdown-content w3-card-4" style="width:500px">
+        <div class="w3-container">
+        <h6> {{book.reviewTeresa}}<b style="display: inline-block; color: rgb(13, 94, 114)">&nbsp;&nbsp;{{book.starsTeresa}}</b> </h6>
+        </div>
+      </div>
+      </div>
+ 
+  </div>
 
   </div>
   {{/each}}
@@ -122,6 +138,22 @@ and is wrapped around the whole page content, except for the footer in this exam
           </div>
         </div>
         <!-- END CURRENT BOOK -->
+
+         <!-- ABANDONED BOOK -->
+         <div class="w3-card w3-margin w3-margin-top">
+          <div class="w3-container w3-white">
+            <h5><b id="book-title"></b></h5>
+            <h7>
+              <p id="book-authors"></p>
+            </h7>
+            <i>
+              <p id="book-description"></p>
+            </i>
+            <script type="text/javascript" src="book-details.js"></script>
+            <script type="text/javascript" src="book-author.js"></script>
+          </div>
+        </div>
+        <!-- END ABANDONED BOOK -->
 
         <!-- END Introduction Menu -->
       </div>
