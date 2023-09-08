@@ -6,79 +6,95 @@
 <head>
   
   <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <!-- CARD SCRIPT FOR RIGHT GRID -->
+  <!-- CARD SCRIPT FOR LEFT GRID -->
   <script id="blog-entry-template-two" type="text/x-handlebars-template">
-  {{#each book as |book|}}
     <div class="w3-card-4 w3-margin w3-white">  
+    {{#each book as |book|}}
       <header class="w3-container w3-right-align">
         <h5><b>{{book.country}}&nbsp;&nbsp;</b><img src="{{book.link}}" style="width:10%"></h5>
       </header>
       <div class="w3-container">
-          <p><img src="{{book.firststar}}" style="width:10%">
-            <img src="{{book.secondstar}}" style="width:10%">
-            <img src="{{book.thirdstar}}" style="width:10%">
-            <img src="{{book.fourthstar}}" style="width:10%">
-            <img src="{{book.fifthstar}}" style="width:10%">
-          </p>
-          <img src="{{book.imageBook}}" class="w3-left w3-margin-right" style="width:60px">
-          <p><a href="{{book.linkTitle}}" target="_blank">{{title}}</a></p>
+        <img src="{{book.imageBook}}" class="w3-left w3-margin-right" style="width:60px">
+        <p><a href="{{book.linkTitle}}" target="_blank">{{title}}</a></p>
+        <p>
+          <img src="{{book.firststar}}" style="width:7%">
+          <img src="{{book.secondstar}}" style="width:7%">
+          <img src="{{book.thirdstar}}" style="width:7%">
+          <img src="{{book.fourthstar}}" style="width:7%">
+          <img src="{{book.fifthstar}}" style="width:7%">
+        </p>
       </div>
+      <div class="w3-dropdown-hover w3-white w3-right-align w3-margin-right">
+        <img src="kitty-book.png" style="width:10%; height:10%">
+        <div class="w3-dropdown-content w3-card-4" style="width:500px">
+          <div class="w3-container">
+            <h6> {{book.reviewInes}}<b style="display: inline-block; color: rgb(148, 21, 120)">&nbsp;&nbsp;{{book.starsInes}}</b> </h6>
+          </div>
+        </div>
+      </div>
+      <div class="w3-dropdown-hover  w3-white w3-right-align w3-margin-right">
+        <img src="kitty-coffee.png" style="width:10%; height:10%">
+        <div class="w3-dropdown-content w3-card-4" style="width:500px">
+          <div class="w3-container">
+            <h6>{{book.reviewTeresa}}<b style="display: inline-block; color: rgb(13, 94, 114)">&nbsp;&nbsp;{{book.starsTeresa}}</b></h6>
+          </div>
+        </div>
+      </div>
+   
       <br>
-    </div>
-  {{/each}}
+      <hr>
+    {{/each}}
+    </div> 
   </script>
-
-
 
   <!-- CARD SCRIPT FOR MIDDLE CARDS -->
   <script id="blog-entry-template-one" type="text/x-handlebars-template">
-    {{#each book as |book|}}
-      <div class="w3-card-4 w3-margin w3-white">  
+    <div class="w3-card-4 w3-margin w3-white">  
+      {{#each book as |book|}}
         <header class="w3-container w3-right-align">
           <h5><b>{{book.country}}&nbsp;&nbsp;</b><img src="{{book.link}}" style="width:10%"></h5>
         </header>
         <div class="w3-container">
-            <img src="{{book.imageBook}}" class="w3-left w3-margin-right" style="width:60px">
-            <p><a href="{{book.linkTitle}}" target="_blank">{{title}}</a></p>
-        </div>
-        <br>
-      </div>
-  {{/each}}
-  </script>
-
-   <!-- CARD SCRIPT FOR CURRENT BOOK -->
-   <script id="blog-entry-template-three" type="text/x-handlebars-template">
-    {{#each book as |book|}}
-      <div class="w3-card-4 w3-margin w3-white">  
-        <header class="w3-container w3-right-align">
-          <h5><b>{{book.country}}&nbsp;&nbsp;</b><img src="{{book.link}}" style="width:10%"></h5>
-        </header>
-        <div class="w3-container">
-          <p><img src="{{book.firststar}}" style="width:10%">
-            <img src="{{book.secondstar}}" style="width:10%">
-            <img src="{{book.thirdstar}}" style="width:10%">
-            <img src="{{book.fourthstar}}" style="width:10%">
-            <img src="{{book.fifthstar}}" style="width:10%">
-          </p>
           <img src="{{book.imageBook}}" class="w3-left w3-margin-right" style="width:60px">
           <p><a href="{{book.linkTitle}}" target="_blank">{{title}}</a></p>
-          <p class="w3-text-teal w3-right-align"><b>Reviewers:</b>&nbsp;&nbsp;
-            <img src="kitty-book.png" style="width:10%; height:10%">&nbsp;&nbsp;
-            <img src="kitty-coffee.png" style="width:10%; height:10%">
-          </p>
         </div>
-      </div>
-  {{/each}}
+        <br>
+        <hr>
+      {{/each}}
+    </div> 
   </script>
 
+  <!-- CARD SCRIPT FOR CURRENT BOOK -->
+  <script id="blog-entry-template-three" type="text/x-handlebars-template">
+    <div class="w3-card-4 w3-margin w3-white">  
+      {{#each book as |book|}}
+        <header class="w3-container w3-right-align">
+          <h5><b>{{book.country}}&nbsp;&nbsp;</b><img src="{{book.link}}" style="width:10%"></h5>
+        </header>
+        <div class="w3-container">
+          <img src="{{book.imageBook}}" class="w3-left w3-margin-right" style="width:60px">
+          <p><a href="{{book.linkTitle}}" target="_blank">{{title}}</a></p>
+          <p>
+            <img src="{{book.firststar}}" style="width:7%">
+            <img src="{{book.secondstar}}" style="width:7%">
+            <img src="{{book.thirdstar}}" style="width:7%">
+            <img src="{{book.fourthstar}}" style="width:7%">
+            <img src="{{book.fifthstar}}" style="width:7%">
+          </p>
+        </div>
+        <br>
+        <hr>
+      {{/each}}
+    </div> 
+  </script>
+  
    <!-- CARD SCRIPT FOR ABANDONED BOOK -->
    <script id="blog-entry-template-four" type="text/x-handlebars-template">
     {{#each book as |book|}}
       <div class="w3-card-4 w3-margin w3-white">  
         <header class="w3-container w3-right-align">
-          <h5 class="w3-text-red" ><b>LEFT BEHIND&nbsp;&nbsp;</b><img src="{{book.firststar}}" style="width:20%"></h5>
+          <h5 class="w3-text-red" ></b><img src="{{book.firststar}}" style="width:20%"></h5>
         </header>
         <div class="w3-container">
           <img src="{{book.imageBook}}" class="w3-left w3-margin-right" style="width:60px">
@@ -108,7 +124,7 @@
 
 <body class="w3-light-grey">
 
-  <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+  <!--<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
     <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
     <a href="#" class="w3-bar-item w3-button">Link 1</a>
     <a href="#" class="w3-bar-item w3-button">Link 2</a>
@@ -119,7 +135,7 @@
     <div>
       <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
       <script src="menu.js" type="text/javascript"></script>
-    </div>
+    </div>-->
     
     <!-- Header -->
     <header class="w3-container w3-center w3-padding-32">
@@ -136,24 +152,30 @@
       <!-- LEFT GRID -->
       <div class="w3-col l4 s12">
         <div id="book-entry-two"></div>
-        <script src="read-books.js" type="text/javascript"></script>
+        <script src="done-books.js" type="text/javascript"></script>
       </div>
       <!-- END LEFT GRID -->
 
       <!-- MIDDLE GRID -->
-      <div class="w3-col l4">
-        <div id="book-entry-one"></div>
-        <script src="read-books.js" type="text/javascript"></script>
-      </div>
-      <!-- END MIDDLE GRID -->
-
-      <!-- RIGHT GRID -->
+      
+    
+      
       <div class="w3-col l4">
 
         <!-- CURRENT BOOK -->
         <div id="book-entry-three"></div>
         <script src="read-books.js" type="text/javascript"></script> 
         <!-- END CURRENT BOOK -->
+        
+        <div id="book-entry-one"></div>
+        <script src="future-books.js" type="text/javascript"></script>
+      </div>
+      <!-- END MIDDLE GRID -->
+
+      <!-- RIGHT GRID -->
+      <div class="w3-col l4">
+
+       
 
         <!-- ABANDONED BOOK -->
         <div id="book-entry-four"></div>
@@ -162,10 +184,11 @@
 
         <!-- CATS CARD -->
         <div class="w3-card w3-margin w3-margin-top  w3-white">
-          <img id="cat-image" src=urlCat style="width:35%">
-            <p id="cat-fact"></p>
+          <img id="cat-image" src=urlCat style="width:35%" class="w3-margin">
+            <p id="cat-fact" class="w3-margin"></p>
             <script type="text/javascript" src="cats-photos.js"></script>
             <script type="text/javascript" src="cats-facts.js"></script>
+            <br>
         </div>
         <!-- END CATS CARD -->
 
