@@ -7,62 +7,52 @@
   
   <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
 
-  <!-- CARD SCRIPT FOR THE BOOKS ALREADY READ-->
+  <!-- CARD SCRIPT FOR RIGHT GRID -->
   <script id="blog-entry-template-two" type="text/x-handlebars-template">
-    {{#each book as |book|}}
-  <div class="w3-card-4 w3-margin w3-white">  
-    <div class="w3-display-container w3-margin w3-white" style="height:200px;">
-      <div class="w3-display-topleft"> 
-        <img src="{{book.link}}">
-        <h4 style="display: inline-block" ><b>&nbsp;&nbsp;{{book.country}}</b></h4>
-      </div>
-      <div class="w3-display-topright"> 
-        <h5 style="display: inline-block" ><i>&nbsp;&nbsp;&nbsp;&nbsp;<a href="{{book.linkTitle}}" target="_blank">{{title}}</a></i> </h5>
-      </div>
-      <div class="w3-display-middle">
-        <div class="w3-row">
+  {{#each book as |book|}}
+  <div class="w3-container">
+    <div class="w3-card-4 w3-margin w3-white">  
+      <header class="w3-container">
+        <h5><img src="{{book.link}}" style="width:10%"><b>&nbsp;&nbsp;{{book.country}}</b></h5>
+      </header>
+      <div class="w3-container">
           <p><span class="{{book.firststar}}"></span>
-             <span class="{{book.secondstar}}"></span>
-             <span class="{{book.thirdstar}}"></span>
-             <span class="{{book.fourthstar}}"></span>
-             <span class="{{book.fifthstar}}"></span></p>
-        </div>
+              <span class="{{book.secondstar}}"></span>
+              <span class="{{book.thirdstar}}"></span>
+              <span class="{{book.fourthstar}}"></span>
+              <span class="{{book.fifthstar}}"></span></p>
+          <img src="{{book.imageBook}}" class="w3-left w3-margin-right" style="width:60px">
+          <p><a href="{{book.linkTitle}}" target="_blank">{{title}}</a></p>
       </div>
-      <div class="w3-display-bottomleft w3-white">
-        <div class="w3-dropdown-hover w3-white">
-          <img src="kitty-book.png" style="width:10%; height:10%">
-          <h6 style="display: inline-block;" ><i><b style="color: rgb(148, 21, 120)">INES</b></i></h6>
-          <div class="w3-dropdown-content w3-card-4" style="width:500px">
-            <div class="w3-container">
-              <h6> {{book.reviewInes}}<b style="display: inline-block; color: rgb(148, 21, 120)">&nbsp;&nbsp;{{book.starsInes}}</b> </h6>
-            </div>
-          </div>
-        </div>
-        <div class="w3-dropdown-hover">
+      <div class="w3-container w3-right-align">
+        <p class="w3-text-teal"><b>Reviewers:</b>&nbsp;&nbsp;
+          <img src="kitty-book.png" style="width:10%; height:10%">&nbsp;&nbsp;
           <img src="kitty-coffee.png" style="width:10%; height:10%">
-          <h6 style="display: inline-block;" ><i><b style="color: rgb(13, 94, 114)">&nbsp;&nbsp;TERESA</b></i></h6>
-          <div class="w3-dropdown-content w3-card-4" style="width:500px">
-            <div class="w3-container">
-              <h6> {{book.reviewTeresa}}<b style="display: inline-block; color: rgb(13, 94, 114)">&nbsp;&nbsp;{{book.starsTeresa}}</b> </h6>
-            </div>
-          </div>
-        </div>
+        </p>
       </div>
+      
     </div>
   </div>
   {{/each}}
   </script>
 
-  <!-- CARD SCRIPT FOR THE FUTURE BOOKS -->
+
+
+  <!-- CARD SCRIPT FOR MIDDLE CARDS -->
   <script id="blog-entry-template-one" type="text/x-handlebars-template">
     {{#each book as |book|}}
-  <div class="w3-card-4 w3-margin w3-white">
-    <div class="w3-container w3-margin">
-      <img src="{{book.link}}">
-      <h4 style="display: inline-block" ><b>&nbsp;&nbsp;{{book.country}}</b></h4>
-      <h5 ><i><a href="{{book.linkTitle}}" target="_blank">{{title}}</a></i> </h5>
+    <div class="w3-container">
+      <div class="w3-card-4 w3-margin w3-white">  
+        <header class="w3-container">
+          <h5><img src="{{book.link}}" style="width:10%"><b>&nbsp;&nbsp;{{book.country}}</b></h5>
+        </header>
+        <div class="w3-container">
+            <img src="{{book.imageBook}}" class="w3-left w3-margin-right" style="width:60px">
+            <p><a href="{{book.linkTitle}}" target="_blank">{{title}}</a></p>
+        </div>
+        <br>
+      </div>
     </div>
-  </div>
   {{/each}}
   </script>
 
@@ -81,6 +71,7 @@
 <!-- END HEAD -->
 
 <body class="w3-light-grey">
+
   <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
     <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
     <a href="#" class="w3-bar-item w3-button">Link 1</a>

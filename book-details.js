@@ -12,7 +12,7 @@ fetch(apiBooks).then(response => {
     return response.json();
 }).then(data => {
     document.getElementById("book-title").innerHTML = data.title
-        //document.getElementById("book-description").innerHTML = data.description.value
+        document.getElementById("book-description").innerHTML = data.description.value
 }
 ).catch(err => {
     document.getElementById("book-title").innerHTML = errorTitle,
