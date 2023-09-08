@@ -3,10 +3,19 @@ window.onload = function () {
     //var template = document.getElementById('entry-template').innerHTML;
     var template_two = document.getElementById('blog-entry-template-two').innerHTML;
     var template_one = document.getElementById('blog-entry-template-one').innerHTML;
+    var template_three = document.getElementById('blog-entry-template-three').innerHTML;
+    var template_four = document.getElementById('blog-entry-template-four').innerHTML;
 
     //Compile the template
     var compiled_template_two = Handlebars.compile(template_two);
     var compiled_template_one = Handlebars.compile(template_one);
+    var compiled_template_three = Handlebars.compile(template_three);
+    var compiled_template_four = Handlebars.compile(template_four);
+
+    const fullPaw = "full-paw.png";
+    const emptyPaw = "empty-paw.png";
+    const halfPaw = "half-paw.png";
+    const talkPaw = "talk-paw.png";
     
     const apiFlag = "https://www.countryflagicons.com/FLAT/64/";
     const amazon = "https://www.amazon.com.br/";
@@ -86,8 +95,8 @@ window.onload = function () {
                 {
                     link: apiFlag + "AO.png",
                     country: "Angola",
-                    linkTitle: amazon + "As-mulheres-do-meu-pai-ebook/dp/B0BTMXKML5/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=&sr=" ,
-                    title: "As mulheres do meu pai",
+                    linkTitle:"" ,
+                    title: "",
                     descriptionLink: apiBooks + booksId[4],
                     imageBook: apiCovers + coversId[4] + "-L.jpg",
                 },
@@ -99,14 +108,6 @@ window.onload = function () {
                     descriptionLink: apiBooks + booksId[3],
                     imageBook: apiCovers + coversId[3] + "-L.jpg",
 
-                },
-                {
-                    link: apiFlag + "DZ.png",
-                    country: "Algeria",
-                    linkTitle: amazon + "So-Vast-Prison-Novel-English-ebook/dp/B00541YDJ4/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=&sr=",
-                    title: "So Vast the Prison",
-                    descriptionLink: apiBooks + booksId[2],
-                    imageBook: apiCovers + coversId[2] + "-L.jpg",
                 },
             ],
         });
@@ -125,11 +126,11 @@ window.onload = function () {
                     starsInes: "2.5/5",
                     reviewTeresa: "The story can be confusing at times and the character doesn't seem to live in the real world. Disappointed with the ending because I found it unrealistic and unnecessary. For me, the author fails to create enough motivation to apply the tradition in such a radical way. I had a hard time sympathizing with the character. Good idea, bad execution. It's well written, though.",
                     starsTeresa: "3/5",
-                    firststar: "fa fa-star checked",
-                    secondstar: "fa fa-star checked",
-                    thirdstar: "fa fa-star checked",
-                    fourthstar: "fa fa-star",
-                    fifthstar: "fa fa-star",
+                    firststar: fullPaw, 
+                    secondstar: fullPaw,
+                    thirdstar: fullPaw,
+                    fourthstar: emptyPaw,
+                    fifthstar: emptyPaw,
                 },
                 {
                     link: apiFlag + "AF.png",
@@ -142,16 +143,54 @@ window.onload = function () {
                     starsInes: "4.5/5",
                     reviewTeresa: "This is an amazing journey through a woman's inner voice. Everything she is, her thoughts, feelings, and confusion about the rules of the world. How she connects her present with her past and makes decisions about the future. I didn't care much for the ending, though (it seemed like the author didn't know how to end). It left a mark on me. I will probably read it again in the future.",
                     starsTeresa: "4/5",
-                    firststar: "fa fa-star checked", 
-                    secondstar: "fa fa-star checked",
-                    thirdstar: "fa fa-star checked",
-                    fourthstar: "fa fa-star checked",
-                    fifthstar: "fa fa-star-half-o checked",
+                    firststar: fullPaw, 
+                    secondstar: fullPaw,
+                    thirdstar: fullPaw,
+                    fourthstar: fullPaw,
+                    fifthstar: halfPaw,
                 },
             ],
         });
 
+        var rendered_three= compiled_template_three(
+            {  
+                book: [
+             
+                    {
+                        link: apiFlag + "DZ.png",
+                        country: "Algeria",
+                        linkTitle: amazon + "So-Vast-Prison-Novel-English-ebook/dp/B00541YDJ4/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=&sr=",
+                        title: "So Vast the Prison",
+                        descriptionLink: apiBooks + booksId[2],
+                        imageBook: apiCovers + coversId[2] + "-L.jpg",
+                        firststar: emptyPaw, 
+                        secondstar: emptyPaw,
+                        thirdstar: emptyPaw,
+                        fourthstar: emptyPaw,
+                        fifthstar: emptyPaw,
+                    },
+                ],
+            });
+
+            var rendered_four= compiled_template_four(
+                {  
+                    book: [
+                 
+                        {
+                            link: apiFlag + "AO.png",
+                            country: "Angola",
+                            linkTitle: amazon + "As-mulheres-do-meu-pai-ebook/dp/B0BTMXKML5/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=&sr=" ,
+                            title: "As mulheres do meu pai",
+                            descriptionLink: apiBooks + booksId[4],
+                            imageBook: "angola-cover-bad.png",
+                            firststar: talkPaw, 
+                        },
+                    ],
+                });
+
     //Overwrite the contents of #target with the renderer HTML
     document.getElementById('book-entry-one').innerHTML = rendered_one;
     document.getElementById('book-entry-two').innerHTML = rendered_two;
+    document.getElementById('book-entry-three').innerHTML = rendered_three;
+    document.getElementById('book-entry-four').innerHTML = rendered_four;
 }
