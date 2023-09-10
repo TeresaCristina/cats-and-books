@@ -6,11 +6,6 @@ window.onload = function () {
 
     var compiled_template_three = Handlebars.compile(template_three);
     var compiled_template_four = Handlebars.compile(template_four);
-
-    const fullPaw = "full-paw.png";
-    const emptyPaw = "empty-paw.png";
-    const halfPaw = "half-paw.png";
-    const talkPaw = "talk-paw.png";
     
     const apiFlagExtra = "https://www.countryflagicons.com/FLAT/64/";
     const amazonExtra = "https://www.amazon.com.br/";
@@ -58,7 +53,7 @@ window.onload = function () {
                             linkTitle: amazonExtra + "As-mulheres-do-meu-pai-ebook/dp/B0BTMXKML5/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=&sr=" ,
                             title: "As mulheres do meu pai",
                             descriptionLink: apiBooks + booksId[4],
-                            imageBook: "angola-cover-bad.png",
+                            imageBook: "images/angola-cover-bad.png",
                         },
                     ],
                 });

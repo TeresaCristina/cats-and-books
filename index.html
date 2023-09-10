@@ -10,7 +10,7 @@
   <!-- SCRIPT FOR REVIEWED BOOKS -->
   <script id="blog-entry-template-two" type="text/x-handlebars-template">
     <div class="w3-card-4 w3-margin w3-padding w3-sand">
-      <h3 class="w3-text-teal"><img src="computer-kitty.png" style="width:10%; height:10%"><b>&nbsp;&nbsp;REVIEWED</b></h3>
+      <h3 class="w3-text-teal"><img src="icons/computer-kitty.png" style="width:10%; height:10%"><b>&nbsp;&nbsp;REVIEWED</b></h3>
       <div class="w3-card-4 w3-white w3-padding">
         {{#each book as |book|}}
           <h5 class="w3-right-align"><b>{{book.country}}&nbsp;&nbsp;</b><img src="{{book.link}}" style="width:10%"></h5>
@@ -23,7 +23,15 @@
             <img src="{{book.fourthstar}}" style="width:7%">
             <img src="{{book.fifthstar}}" style="width:7%">
           </p>
+          <div class="w3-dropdown-hover w3-white">
           <p class="w3-text-teal w3-right-align"><i><b>Read Review</b></i>&nbsp;&nbsp;</p>
+            <div class="w3-dropdown-content w3-card-4" style="width:300%">
+              <div class="w3-container">
+                <h6> INES: {{book.reviewInes}}<b style="display: inline-block; color: rgb(148, 21, 120)">&nbsp;&nbsp;{{book.starsInes}}</b> </h6>
+                <h6> TERESA: {{book.reviewTeresa}}<b style="display: inline-block; color: rgb(148, 21, 120)">&nbsp;&nbsp;{{book.starsInes}}</b> </h6>
+              </div>
+            </div>
+          </div>
           <hr>
         {{/each}}
       </div>
@@ -35,7 +43,7 @@
   <!-- SCRIPT FOR FUTURE BOOKS -->
   <script id="blog-entry-template-one" type="text/x-handlebars-template">
     <div class="w3-card-4 w3-margin w3-padding w3-sand">
-      <h3 class="w3-text-teal"><img src="kitty-coffee.png" style="width:10%; height:10%"><b>&nbsp;&nbsp;PLANNED READING</b></h3>
+      <h3 class="w3-text-teal"><img src="icons/kitty-coffee.png" style="width:10%; height:10%"><b>&nbsp;&nbsp;PLANNED READING</b></h3>
       <div class="w3-card-4 w3-white w3-padding">  
         {{#each book as |book|}}
         <img src="{{book.imageBook}}" class="w3-left w3-margin-right" style="width:60px">
@@ -52,7 +60,7 @@
   <!-- SCRIPT FOR CURRENT BOOKS -->
   <script id="blog-entry-template-three" type="text/x-handlebars-template">
     <div class="w3-card-4 w3-margin w3-padding w3-sand">
-      <h3 class="w3-text-teal"><img src="kitty-book.png" style="width:10%; height:10%"><b>&nbsp;&nbsp;CURRENT</b></h3>
+      <h3 class="w3-text-teal"><img src="icons/kitty-book.png" style="width:10%; height:10%"><b>&nbsp;&nbsp;CURRENT</b></h3>
       <div class="w3-card-4 w3-white w3-padding">  
         {{#each book as |book|}}
           <img src="{{book.imageBook}}" class="w3-left w3-margin-right" style="width:60px">
@@ -68,7 +76,7 @@
   <!-- SCRIPT FOR ABANDONED BOOK -->
   <script id="blog-entry-template-four" type="text/x-handlebars-template">
     <div class="w3-card-4 w3-margin w3-padding w3-sand">
-      <h3 class="w3-text-teal"><img src="talk-paw.png" style="width:10%; height:10%"><b>&nbsp;&nbsp;ABANDONED</b></h3>
+      <h3 class="w3-text-teal"><img src="icons/talk-paw.png" style="width:10%; height:10%"><b>&nbsp;&nbsp;ABANDONED</b></h3>
       <div class="w3-card-4 w3-white">
         {{#each book as |book|}}
         <header class="w3-container w3-right-align">

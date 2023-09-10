@@ -5,10 +5,10 @@ var template_two = document.getElementById('blog-entry-template-two').innerHTML;
     var compiled_template_two = Handlebars.compile(template_two);
 
 
-    const fullPaw = "full-paw.png";
-    const emptyPaw = "empty-paw.png";
-    const halfPaw = "half-paw.png";
-    const talkPaw = "talk-paw.png";
+    const fullPaw = "icons/full-paw.png";
+    const emptyPaw = "icons/empty-paw.png";
+    const halfPaw = "icons/half-paw.png";
+    const talkPaw = "icons/talk-paw.png";
     
     const apiFlagDone = "https://www.countryflagicons.com/FLAT/64/";
     const amazonDone = "https://www.amazon.com.br/";
