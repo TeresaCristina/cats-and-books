@@ -4,8 +4,8 @@ const authors = [
     "OL5499254A",
     "OL29464A"
 ];
-var apiAuthors = apiLibraryAuthor + authors[2] + '.json';
-var errorMessage = "This is supposed to be the name of a person.";
+//var apiAuthors = apiLibraryAuthor + authors[2] + '.json';
+//var errorMessage = "This is supposed to be the name of a person.";
 
 
 fetch(apiAuthors).then(response => {
