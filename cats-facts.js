@@ -1,4 +1,4 @@
-var apiUrl = 'https://catfact.ninja/fact?max_length=140';
+var apiUrl = 'https://catfact.ninja/fact?max_length=280';
 var errorMessage = "This is supposed to be a fact about cats. But something happened...maybe it was a cat...";
 
 fetch(apiUrl).then(response => {

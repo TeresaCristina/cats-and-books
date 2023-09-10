@@ -50,6 +50,7 @@ var template_two = document.getElementById('blog-entry-template-two').innerHTML;
                     thirdstar: fullPaw,
                     fourthstar: emptyPaw,
                     fifthstar: emptyPaw,
+                    author: "Elvira Dones"
                 },
                 {
                     link: apiFlagDone + "AF.png",
@@ -67,6 +68,7 @@ var template_two = document.getElementById('blog-entry-template-two').innerHTML;
                     thirdstar: fullPaw,
                     fourthstar: fullPaw,
                     fifthstar: halfPaw,
+                    author: "Atiq Rahimi"
                 },
             ],
         });

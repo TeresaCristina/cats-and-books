@@ -43,11 +43,7 @@ window.onload = function () {
                         title: "So Vast the Prison",
                         descriptionLink: apiBooks + booksId[2],
                         imageBook: apiCovers + coversId[2] + "-L.jpg",
-                        firststar: emptyPaw, 
-                        secondstar: emptyPaw,
-                        thirdstar: emptyPaw,
-                        fourthstar: emptyPaw,
-                        fifthstar: emptyPaw,
+                        author: "Assia Djebar"
                     },
                 ],
             });
@@ -63,7 +59,6 @@ window.onload = function () {
                             title: "As mulheres do meu pai",
                             descriptionLink: apiBooks + booksId[4],
                             imageBook: "angola-cover-bad.png",
-                            firststar: talkPaw, 
                         },
                     ],
                 });
