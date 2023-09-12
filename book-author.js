@@ -1,4 +1,4 @@
-const apiLibraryAuthor = 'https://openlibrary.org/authors/';
+
 const authors = [
     "OL2645201A",
     "OL5499254A",
