@@ -5,110 +5,45 @@
 
 <head>
 
-  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
-  <script src="data/apis.js" type="text/javascript"></script>
-  <script src="icons/icons.js" type="text/javascript"></script>
-  <script src="data/countries.js" type="text/javascript"></script>
-  <script src="data/reviews.js" type="text/javascript"></script>
-  <script src="data/books.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="data/apis.js" type="text/javascript"></script>
+    <script src="icons/icons.js" type="text/javascript"></script>
+    <script src="data/countries.js" type="text/javascript"></script>
+    <script src="data/reviews.js" type="text/javascript"></script>
+    <script src="data/books.js" type="text/javascript"></script>
+    <script src="data/agatha.js" type="text/javascript"></script>
 
-  <script id="blog-entry-template-two" type="text/x-handlebars-template">
-    <div class="w3-card-4 w3-margin w3-padding w3-sand">
-      <h3 class="w3-text-teal"><img src="icons/computer-kitty.png" style="width:10%; height:10%"><b>&nbsp;&nbsp;REVIEWED</b></h3>
-      <div class="w3-card-4 w3-white w3-padding">
-        {{#each book as |book|}}
-          <h5 class="w3-right-align"><b>{{book.country}}&nbsp;&nbsp;</b><img src="{{book.flag}}" style="width:10%"></h5>
-          <img src="{{book.cover}}" class="w3-left w3-margin-right" style="width:60px">
-          <p> <i><a href="{{book.linkTitle}}" target="_blank">{{title}}</a></i> by {{author}}</p>
-          <p>
-            <img src="{{book.firststar}}" style="width:7%">
-            <img src="{{book.secondstar}}" style="width:7%">
-            <img src="{{book.thirdstar}}" style="width:7%">
-            <img src="{{book.fourthstar}}" style="width:7%">
-            <img src="{{book.fifthstar}}" style="width:7%">
-          </p>
-          <div class="w3-dropdown-hover w3-white">
-          <p class="w3-text-teal w3-right-align"><i><b>Read Review</b></i>&nbsp;&nbsp;</p>
-            <div class="w3-dropdown-content w3-card-4" style="width:300%">
-              <div class="w3-container">
-                <h6> INES: {{book.reviewInes}}<b style="display: inline-block; color: rgb(148, 21, 120)">&nbsp;&nbsp;{{book.starsInes}}</b> </h6>
-                <h6> TERESA: {{book.reviewTeresa}}<b style="display: inline-block; color: rgb(148, 21, 120)">&nbsp;&nbsp;{{book.starsInes}}</b> </h6>
-              </div>
-            </div>
-          </div>
-          <hr>
+
+    <!-- SCRIPT FOR LIST POIROT -->
+    <script id="blog-entry-template-poirot-one" type="text/x-handlebars-template">
+        <table class="w3-table">
+        {{#each bookPoirot as |bookPoirot|}}
+        <tr>
+            <td style="width:50%"><a href="{{bookPoirot.linkBook}}" target="_blank"><img src="{{bookPoirot.cover}}" style="width:10%"></a><b>&nbsp;&nbsp;{{bookPoirot.title}}</b></td>
+            <td class="w3-right-align"> 
+                <p><i><a href="{{bookPoirot.imdb}}" target="_blank">{{bookPoirot.tv}}</i></a></p>
+                <img src={{bookPoirot.reviewOne}} style="width:8%">
+                <img src={{bookPoirot.reviewTwo}} style="width:8%">
+                <img src={{bookPoirot.reviewThree}} style="width:8%">
+                <img src={{bookPoirot.reviewFour}} style="width:8%">
+                <img src={{bookPoirot.reviewFive}} style="width:8%">
+            </td>
+        </tr>
         {{/each}}
-      </div>
-      <br>
-    </div> 
-  </script>
-  <!-- SCRIPT FOR REVIEWED BOOKS -->
+    </table>
+    </script>
+    <!-- END SCRIPT FOR LIST POIROT -->
 
-  <!-- SCRIPT FOR FUTURE BOOKS -->
-  <script id="blog-entry-template-one" type="text/x-handlebars-template">
-    <div class="w3-card-4 w3-margin w3-padding w3-sand">
-      <h3 class="w3-text-teal"><img src="icons/kitty-coffee.png" style="width:10%; height:10%"><b>&nbsp;&nbsp;PLANNED READING</b></h3>
-      <div class="w3-card-4 w3-white w3-padding">  
-        {{#each book as |book|}}
-        <img src="{{book.imageBook}}" class="w3-left w3-margin-right" style="width:60px">
-        <p><img src="{{book.flag}}" style="width:10%"><b>&nbsp;&nbsp;{{book.country}}</b></p>
-        <p> <i><a href="{{book.linkTitle}}" target="_blank">{{title}}</a></i> by {{author}}</p>
-          <hr>
-        {{/each}}
-      </div>
-      <br>
-    </div> 
-  </script>
-  <!-- SCRIPT FOR FUTURE BOOKS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- SCRIPT FOR CURRENT BOOKS -->
-  <script id="blog-entry-template-three" type="text/x-handlebars-template">
-    <div class="w3-card-4 w3-margin w3-padding w3-sand">
-      <h3 class="w3-text-teal"><img src="icons/kitty-book.png" style="width:10%; height:10%"><b>&nbsp;&nbsp;CURRENT</b></h3>
-      <div class="w3-card-4 w3-white w3-padding">  
-        {{#each book as |book|}}
-          <img src="{{book.cover}}" class="w3-left w3-margin-right" style="width:60px">
-          <p><img src="{{book.flag}}" style="width:10%"><b>&nbsp;&nbsp;{{book.country}}</b></p>
-          <p> <i> <a href="{{book.linkTitle}}" target="_blank">{{title}}</a></i> by {{author}}</p>
-        {{/each}}
-      </div>
-      <br>
-    </div> 
-  </script>
-  <!-- SCRIPT FOR CURRENT BOOKS -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-grey-cells.css">
 
-  <!-- SCRIPT FOR ABANDONED BOOK -->
-  <script id="blog-entry-template-four" type="text/x-handlebars-template">
-    <div class="w3-card-4 w3-margin w3-padding w3-sand">
-      <h3 class="w3-text-teal"><img src="icons/talk-paw.png" style="width:10%; height:10%"><b>&nbsp;&nbsp;ABANDONED</b></h3>
-      <div class="w3-card-4 w3-white">
-        {{#each book as |book|}}
-        <header class="w3-container w3-right-align">
-          <h5><b>{{book.country}}&nbsp;&nbsp;</b><img src="{{book.link}}" style="width:10%"></h5>
-        </header>
-          <div class="w3-container">
-            <img src="{{book.imageBook}}" class="w3-left w3-margin-right" style="width:60px">
-            <p><a href="{{book.linkTitle}}" target="_blank">{{title}}</a></p>
-            <p class="w3-text-red w3-right-align"><b>Read Why</b>&nbsp;&nbsp;</p>
-          </div>
-          <br>
-        {{/each}}
-      </div>
-      <br>
-    </div> 
-  </script>
-  <!-- END SCRIPT FOR ABANDONED BOOK -->
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="style-grey-cells.css">
-
-  <title>THE LITTLE GREY CELLS</title>
+    <title>THE LITTLE GREY CELLS</title>
 
 </head>
 
@@ -116,75 +51,61 @@
 
 <body class="w3-light-grey">
 
-  <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
-    <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
-    <a href="index.html" class="w3-bar-item w3-button">Home</a>
-    <a href="around-world.html" class="w3-bar-item w3-button">Read Around The World</a>
-    <a href="hercule-poirot.html" class="w3-bar-item w3-button">The Little Grey Cells</a>
-  </div>
-
-  <div id="main">
-    <div>
-      <button id="openNav" class="w3-button grey-cells-theme-02 w3-xlarge" onclick="w3_open()">&#9776;</button>
-      <script src="menu.js" type="text/javascript"></script>
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+        <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
+        <a href="index.html" class="w3-bar-item w3-button">Home</a>
+        <a href="around-world.html" class="w3-bar-item w3-button">Read Around The World</a>
+        <a href="hercule-poirot.html" class="w3-bar-item w3-button">The Little Grey Cells</a>
     </div>
 
-  <!-- Header -->
-  <header class="w3-container w3-center w3-padding-32">
-    <h1 class="grey-cells-text-01"><b>THE LITTLE GREY CELLS</b></h1>
-    <p class="grey-cells-text-02">The Misteries of Hercule Poirot, order based on
-        <i><a href=" https://www.bookseriesinorder.com/agatha-christie/" target="_blank">Book Series In Order</a></i></p>
-  </header>
-  <!-- End Header -->
+    <div id="main">
+        <div>
+            <button id="openNav" class="w3-button grey-cells-theme-02 w3-xlarge" onclick="w3_open()">&#9776;</button>
+            <script src="menu.js" type="text/javascript"></script>
+        </div>
 
-  </div>
+        <!-- Header -->
+        <header class="w3-container w3-center w3-padding-32">
+            <h1 class="grey-cells-text-01"><b>THE LITTLE GREY CELLS</b></h1>
+            <p class="grey-cells-text-02">The Misteries of Hercule Poirot, order based on
+                <i><a href=" https://www.bookseriesinorder.com/agatha-christie/" target="_blank">Book Series In
+                        Order</a></i>
+            </p>
+        </header>
+        <!-- End Header -->
 
-  <div class="w3-container">
-    <div class="w3-col l8 s12">
-  
-    <table class="w3-table w3-border">
-      <tr>
-        <th>Book</th>
-        <th>TV Series</th>
-        <th>Review</th>
-      </tr>
-      <tr>
-        <td><img src="" style="width:10%"><b>&nbsp;&nbsp;The Mysterious Affair at Styles</b></td>
-        <td></td>
-        <td>       <img src="paws-full.png" style="width:3%">
-            <img src="paws-full.png" style="width:3%">
-            <img src="paws-full.png" style="width:3%">
-            <img src="paws-full.png" style="width:3%">
-            <img src="paws-empty.png" style="width:3%"></td>
-      </tr>
-      <tr>
-        <td><img src="" style="width:10%"><b>&nbsp;&nbsp;The Murder on the Links</b></td>
-        <td>Jackson</td>
-        <td>       <img src="paws-full.png" style="width:3%">
-            <img src="paws-full.png" style="width:3%">
-            <img src="paws-full.png" style="width:3%">
-            <img src="paws-full.png" style="width:3%">
-            <img src="paws-empty.png" style="width:3%"></td>
-      </tr>
-      <tr>
-        <td>
-     
-          </td>
-        <td>Johnson</td>
-        <td>67</td>
-      </tr>
-    </table>
-  </div>
-</div>
+    </div>
+
+    <div class="w3-container">
+        <div class="w3-col l8 s12">
+            <div class="w3-card-4 w3-margin w3-padding">
+                    <div id="book-entry-poirot"></div>
+                    <script src="poirot-books.js" type="text/javascript"></script>
+               
+            </div>
+        </div>
+        <div class="w3-col l4 s12">
+              <!-- CATS FACTS CARD -->
+        <div class="w3-card-4 w3-margin w3-padding">
+            <div class="w3-container">
+              <img id="cat-image" src=urlCat class="w3-left w3-margin-right" style="width:140px">
+              <p id="cat-fact"></p>
+              <script type="text/javascript" src="cats/cats-photos.js"></script>
+              <script type="text/javascript" src="cats/cats-facts.js"></script>
+            </div>
+          </div>
+          <!-- END FACTS CATS CARD -->
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="w3-container grey-cells-theme-01 w3-padding-32 w3-margin-top">
-      <p>Made by Teresa using <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">W3.CSS TUTORIAL.</a>
-      </p>
-      <p>Cat Icons from <a href="https://www.flaticon.com/free-icons/cat" title="cat icons">Freepik - Flaticon</a></p>
+        <p>Made by Teresa using <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">W3.CSS
+                TUTORIAL.</a>
+        </p>
+        <p>Cat Icons from <a href="https://www.flaticon.com/free-icons/cat" title="cat icons">Freepik - Flaticon</a></p>
     </footer>
 
 </body>
 
 </html>
-
