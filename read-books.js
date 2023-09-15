@@ -1,5 +1,15 @@
-var template_three = document.getElementById('blog-entry-template-three').innerHTML;
 var template_four = document.getElementById('blog-entry-template-four').innerHTML;
+
+
+var template_three = '<div class="w3-card-4 w3-white w3-margin w3-padding">'+
+                        '{{#each book as |book|}}'+
+                            '<img src="{{book.cover}}" class="w3-left w3-margin-right" style="width:60px">'+
+                            '<p><img src="{{book.flag}}" style="width:10%"><b>&nbsp;&nbsp;{{book.country}}</b></p>'+
+                            '<p> <i> <a href="{{book.linkTitle}}" target="_blank">{{title}}</a></i> by {{author}}</p>'+
+                        '{{/each}}'+
+                    '</div>';
+   
+
 var compiled_template_three = Handlebars.compile(template_three);
 var compiled_template_four = Handlebars.compile(template_four);
 

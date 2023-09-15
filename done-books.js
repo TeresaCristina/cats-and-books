@@ -1,4 +1,28 @@
-var template_two = document.getElementById('blog-entry-template-two').innerHTML;
+var template_two = '<div class="w3-card-4 w3-white w3-margin w3-padding">'+
+                    '{{#each book as |book|}}'+
+                        '<h5 class="w3-right-align"><b>{{book.country}}&nbsp;&nbsp;</b><img src="{{book.flag}}" style="width:10%"></h5>'+
+                        '<img src="{{book.cover}}" class="w3-left w3-margin-right" style="width:60px">'+
+                        '<p> <i><a href="{{book.linkTitle}}" target="_blank">{{title}}</a></i> by {{author}}</p>'+
+                        '<p>'+
+                            '<img src="{{book.firststar}}" style="width:7%">'+
+                            '<img src="{{book.secondstar}}" style="width:7%">'+
+                            '<img src="{{book.thirdstar}}" style="width:7%">'+
+                            '<img src="{{book.fourthstar}}" style="width:7%">'+
+                            '<img src="{{book.fifthstar}}" style="width:7%">'+
+                        '</p>'+
+                        '<div class="w3-dropdown-hover w3-white">'+
+                            '<p class="around-world-theme-01 w3-right-align"><i><b>Read Review</b></i>&nbsp;&nbsp;</p>'+
+                            '<div class="w3-dropdown-content w3-card-4" style="width:300%">'+
+                            '<div class="w3-container">'+
+                                '<h6> INES: {{book.reviewInes}}<b style="display: inline-block; color: rgb(148, 21, 120)">&nbsp;&nbsp;{{book.starsInes}}</b> </h6>'+
+                                '<h6> TERESA: {{book.reviewTeresa}}<b style="display: inline-block; color: rgb(148, 21, 120)">&nbsp;&nbsp;{{book.starsInes}}</b> </h6>'+
+                            '</div>'+
+                        '</div>'+
+                        '</div>'+
+                        '<hr>'+
+                    '{{/each}}'+
+                    '</div>';
+
 var compiled_template_two = Handlebars.compile(template_two);
 
 var rendered_two = compiled_template_two(
