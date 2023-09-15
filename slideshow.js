@@ -1,3 +1,7 @@
+window.onload = (event) => {
+    showDivs(slideIndex);
+  };
+
 var slideIndex = 1;
 showDivs(slideIndex);
 
