@@ -19,14 +19,14 @@
         <table class="w3-table">
         {{#each bookPoirot as |bookPoirot|}}
         <tr>
-            <td style="width:50%"><a href="{{bookPoirot.linkBook}}" target="_blank"><img src="{{bookPoirot.cover}}" style="width:10%"></a><b>&nbsp;&nbsp;{{bookPoirot.title}}</b></td>
+            <td style="width:65%"><a href="{{bookPoirot.linkBook}}" target="_blank"><img src="{{bookPoirot.cover}}" style="width:10%"></a><b>&nbsp;&nbsp;{{bookPoirot.title}}</b></td>
             <td class="w3-right-align"> 
                 <p><i><a href="{{bookPoirot.imdb}}" target="_blank">{{bookPoirot.tv}}</i></a></p>
-                <img src={{bookPoirot.reviewOne}} style="width:8%">
-                <img src={{bookPoirot.reviewTwo}} style="width:8%">
-                <img src={{bookPoirot.reviewThree}} style="width:8%">
-                <img src={{bookPoirot.reviewFour}} style="width:8%">
-                <img src={{bookPoirot.reviewFive}} style="width:8%">
+                <img src={{bookPoirot.reviewOne}} style="width:10%">
+                <img src={{bookPoirot.reviewTwo}} style="width:10%">
+                <img src={{bookPoirot.reviewThree}} style="width:10%">
+                <img src={{bookPoirot.reviewFour}} style="width:10%">
+                <img src={{bookPoirot.reviewFive}} style="width:10%">
             </td>
         </tr>
         {{/each}}

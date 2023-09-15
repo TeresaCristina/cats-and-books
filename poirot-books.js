@@ -29,6 +29,42 @@ var rendered_two = compiled_template_two(
                 reviewFour: emptyPawBlack,
                 reviewFive: emptyPawBlack
             },
+            {
+                title: poirot[2].title,
+                cover: apiBookCovers + poirot[2].cover,
+                linkBook: poirot[2].linkBook,
+                imdb: poirot[2].imdb,
+                tv: poirot[2].tv,
+                reviewOne: fullPawBlack,
+                reviewTwo: fullPawBlack,
+                reviewThree: fullPawBlack,
+                reviewFour: fullPawBlack,
+                reviewFive: fullPawBlack            
+            },
+            {
+                title: poirot[3].title,
+                cover: apiBookCovers + poirot[3].cover,
+                linkBook: poirot[3].linkBook,
+                imdb: poirot[3].imdb,
+                tv: poirot[3].tv,
+                reviewOne: emptyPawBlack,
+                reviewTwo: emptyPawBlack,
+                reviewThree: emptyPawBlack,
+                reviewFour: emptyPawBlack,
+                reviewFive: emptyPawBlack            
+            },
+            {
+                title: poirot[4].title,
+                cover: apiBookCovers + poirot[4].cover,
+                linkBook: poirot[4].linkBook,
+                imdb: poirot[4].imdb,
+                tv: poirot[4].tv,
+                reviewOne: emptyPawBlack,
+                reviewTwo: emptyPawBlack,
+                reviewThree: emptyPawBlack,
+                reviewFour: emptyPawBlack,
+                reviewFive: emptyPawBlack            
+            },
         ],
     });
 

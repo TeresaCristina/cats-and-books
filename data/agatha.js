@@ -14,11 +14,24 @@ const poirot = [
         "linkBook": "https://openlibrary.org/books/OL18171013M/Murder_on_the_links"    
     },
     {
-        "title": "Algeria",
-        "code": "DZ"
+        "title": "The Adventure of 'The Western Star'",
+        "imdb": "https://www.imdb.com/title/tt0676166/",
+        "tv": "Poirot, Season 2, Episode 9",
+        "cover": "	11562020-L.jpg",
+        "linkBook": "https://openlibrary.org/books/OL15015171M/Poirot_investigates"  
     },
     {
-        "title": "Andorra",
-        "code": "AD"
+        "title": "The Tragedy at Marsdon Manor",
+        "imdb": "https://www.imdb.com/title/tt0676189/",
+        "tv": "Poirot, Season 3, Episode 6",
+        "cover": "	11562020-L.jpg",
+        "linkBook": "https://openlibrary.org/books/OL15015171M/Poirot_investigates"  
+    },
+    {
+        "title": "The Adventure of the Cheap Flat",
+        "imdb": "https://www.imdb.com/title/tt0676163/",
+        "tv": "Poirot, Season 2, Episode 7",
+        "cover": "	11562020-L.jpg",
+        "linkBook": "https://openlibrary.org/books/OL15015171M/Poirot_investigates"  
     },
 ]
