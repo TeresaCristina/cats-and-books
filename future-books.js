@@ -1,17 +1,16 @@
 //DATA ABOUT THE PLANNED READING
 
-var template_one =  '<div class="w3-card-4 w3-white w3-margin w3-padding">'+
-                        '{{#each book as |book|}}'+
-                            '<img src="{{book.imageBook}}" class="w3-left w3-margin-right" style="width:60px">'+
-                            '<p><img src="{{book.flag}}" style="width:10%">'+
-                                '<b>&nbsp;&nbsp;{{book.country}}</b>'+
-                            '</p>'+
-                            '<p>'+
-                                '<i><a href="{{book.linkTitle}}" target="_blank">{{title}}</a></i> by {{author}}'+
-                            '</p>'+
-                            '<hr>'+
-                        '{{/each}}'+
-                    '</div>';
+var template_one = '{{#each book as |book|}}' +
+    '<div class="w3-card-4 w3-white w3-margin w3-padding">' +
+    '<img src="{{book.imageBook}}" class="w3-left w3-margin-right" style="width:60px">' +
+    '<p><img src="{{book.flag}}" style="width:10%">' +
+    '<b>&nbsp;&nbsp;{{book.country}}</b>' +
+    '</p>' +
+    '<p>' +
+    '<i><a href="{{book.linkTitle}}" target="_blank">{{title}}</a></i> by {{author}}' +
+    '</p>' +
+    '</div>' +
+    '{{/each}}';
 
 var compiled_template_one = Handlebars.compile(template_one);
 
